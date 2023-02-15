@@ -91,3 +91,5 @@ resource "azurerm_resource_group" "allrg" {
 
 Déployer un Log Analytics et récupérer les Metrics de votre Keyvault avec 
 Diagnostic Settings 
+
+curl.exe -LO "https://dl.k8s.io/v1.24.0/bin/windows/amd64/kubectl.exe.sha256
