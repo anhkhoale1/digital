@@ -40,5 +40,20 @@ resource "azurerm_key_vault_secret" "mdpsql" {
 # 1 chiffre min 
 # 1 ! min 
 
+resource "azurerm_mssql_database" "database" {
+  name                        = "raph-database"
+  server_id                   = azurerm_mssql_server.sqlsrv.id
+  collation                   = "SQL_Latin1_General_CP1_CI_AS"
+  auto_pause_delay_in_minutes = 60
+  min_capacity                = 1
+  max_size_gb                 = 4
+  sku_name                    = "GP_S_Gen5_2"
+  zone_redundant              = true
+}
+
+# Deployer un MSSQL_Database sur votre MSSQL_Server 
+
+# sku_name = GP_S_Gen5_2 
 
 
+# git raphaeldeletoille

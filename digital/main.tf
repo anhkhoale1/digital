@@ -69,3 +69,15 @@ resource "azurerm_key_vault" "vault" {
 
 # terraform apply -auto-approve 
 
+Deployer 10 resource group à partir d'un seul bloc --> count 
+
+resource "azurerm_resource_group" "allrg" {
+  count    = 10 
+  name     = "raphrg${count.index}"
+  location = "West Europe"
+}
+
+Deployer 3 resource group avec for_each et une variable de type map 
+1 en West Europe 
+1 en france central 
+1 en West US 
