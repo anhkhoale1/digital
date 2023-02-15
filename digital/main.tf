@@ -69,10 +69,10 @@ resource "azurerm_key_vault" "vault" {
 
 # terraform apply -auto-approve 
 
-Deployer 10 resource group à partir d'un seul bloc --> count 
+#Deployer 10 resource group à partir d'un seul bloc --> count 
 
 resource "azurerm_resource_group" "allrg" {
-  count    = 10 
+  count    = 10
   name     = "${var.myname}rg${count.index}"
   location = "West Europe"
 }
@@ -82,20 +82,12 @@ resource "azurerm_resource_group" "allrg" {
 # 1 en france central 
 # 1 en West US 
 
-resource "azurerm_resource_group" "allrg" {
+# resource "azurerm_resource_group" "allrg" {
 
-  for_each = var.allrg 
-  name     = each.value.name 
-  location = each.value.location 
-}
+#   for_each = var.allrg
+#   name     = each.value.name
+#   location = each.value.location
+# }
 
-Déployer votre subnet sur le resource group 7 de votre bloc count
-Déployer une machine virtuelle (Linux ou Windows Server sur votre subnet)
-Connectez vous à votre VM 
-
-Vous aurez besoin de : 
-Virtual Network 
-Subnet 
-Network Interface Card 
-Virtual Machine 
-IP Public 
+Déployer un Log Analytics et récupérer les Metrics de votre Keyvault avec 
+Diagnostic Settings 
