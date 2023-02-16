@@ -89,7 +89,29 @@ resource "azurerm_resource_group" "allrg" {
 #   location = each.value.location
 # }
 
-Déployer un Log Analytics et récupérer les Metrics de votre Keyvault avec 
-Diagnostic Settings 
 
-curl.exe -LO "https://dl.k8s.io/v1.24.0/bin/windows/amd64/kubectl.exe.sha256
+
+en Terraform --> Déployer un Log Analytics et récupérer les Metrics de votre Storage Account avec Diagnostic Settings // Resource Group 
+
+
+
+terraform 
+download terraform sur https://developer.hashicorp.com/terraform/downloads 
+a ajouter dans ses variables d'environnement (Path)
+pour test, ouvrir cmd --> terraform version
+
+
+az cli https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+Suivant, Suivant, Suivant 
+pour test, ouvrir cmd --> az version
+
+
+kubectl 1.24 
+https://dl.k8s.io/v1.24.0/bin/windows/amd64/kubectl.exe.sha256
+pour test, kubectl --version 
+
+
+
+
+ 
+

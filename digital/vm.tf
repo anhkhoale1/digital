@@ -1,13 +1,13 @@
-# Déployer votre subnet sur le resource group 7 de votre bloc count
-# Déployer une machine virtuelle (Linux ou Windows Server sur votre subnet)
-# Connectez vous à votre VM 
+# # Déployer votre subnet sur le resource group 7 de votre bloc count
+# # Déployer une machine virtuelle (Linux ou Windows Server sur votre subnet)
+# # Connectez vous à votre VM 
 
-# Vous aurez besoin de : 
-# Virtual Network 
-# Subnet 
-# Network Interface Card 
-# Virtual Machine 
-# IP Public 
+# # Vous aurez besoin de : 
+# # Virtual Network 
+# # Subnet 
+# # Network Interface Card 
+# # Virtual Machine 
+# # IP Public 
 
 
 resource "azurerm_public_ip" "ip" {
@@ -68,5 +68,4 @@ resource "azurerm_windows_virtual_machine" "raphvm" {
   }
 }
 
-Déployer un Log Analytics et récupérer les Metrics de votre Keyvault avec 
-Diagnostic Settings 
+
